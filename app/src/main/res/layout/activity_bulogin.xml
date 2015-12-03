@@ -25,7 +25,13 @@
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="8"
-        android:background="#2BAFDF" >
+        android:background="#83A3FC" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ENTER VEHICLE NUMBER"
+            android:paddingTop="200dp"/>
     </FrameLayout>
     <FrameLayout
         android:layout_width="fill_parent"
