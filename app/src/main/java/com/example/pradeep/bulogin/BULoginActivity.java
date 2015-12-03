@@ -1,17 +1,24 @@
 package com.example.pradeep.bulogin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class BULoginActivity extends Activity {
+public class BULoginActivity extends Activity implements View.OnClickListener {
 
+    Button btnJson;
   //Test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bulogin);
+        setContentView(R.layout.test);
+
+        btnJson = (Button) findViewById(R.id.btnJsonRequest);
+        btnJson.setOnClickListener(this);
     }
 
     @Override
@@ -34,5 +41,18 @@ public class BULoginActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            case R.id.btnJsonRequest:
+                startActivity(new Intent(BULoginActivity.this,JsonRequestActivity.class));
+                break;
+
+            default:
+                break;
+        }
     }
 }
